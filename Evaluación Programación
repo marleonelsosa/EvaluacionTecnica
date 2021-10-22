@@ -1,0 +1,173 @@
+Evaluación Programación 
+Para cada problema, explicar el algoritmo que usaría para resolverlo en el lenguaje de programación de  su preferencia o en pseudocódigo. Sintaxis perfecta no es importante, siempre y cuando se logre entender  el procedimiento y no se recurran a funciones sin explicar que estén directamente relacionadas con el  problema que se pide resolver. 
+Para aquellos problemas con entrada/salida se puede asumir el formato de entrada que se desee y elegir el  formato de salida también. 
+1) Explique cómo encontrar el mayor elemento de un array de enteros. 
+Ej: para el siguiente array (5 8 0 -10 44 89 1 3 7 77 12 -3 4) el programa debería devolver: 89 
+2) Dado un array de enteros, hacer una función que indique que rangos de números consecutivos dan  como resultado la cantidad que se le pasa como parámetro: 
+Ej: array=(6,7,5,4,3,1,2,3,5,6,7,9,0,0,1,2,4,1,2,3,5,1,2) 
+ sumar(13) 
+Los elementos entre (0,1) suman 13 
+Los elementos entre (2,5) suman 13 
+Los elementos entre (3,7) suman 13 
+Los elementos entre (9,10) suman 13 
+Los elementos entre (12,19) suman 13 
+Los elementos entre (13,19) suman 13 
+Los elementos entre (14,19) suman 13 
+Los elementos entre (18,22) suman 13
+3) Dada una lista sencillamente enlazada, explicar cómo obtener el elemento del medio. En caso de tener  una cantidad de elementos par, puede ser cualquiera de los dos. Si usa un método que devuelve el  tamaño de la lista debe definirlo. 
+Ej: Arbol -> Casa -> Ruta Resultado: Casa 
+ Pedro -> Juan -> Jose -> Marcos Resultado: Juan o Jose, ambos válidos. 
+4) Un palíndromo es una palabra o frase que se lee igual al derecho que al revés. Hacer una función que  determine si una palabra o frase es un palíndromo. 
+Ej: es_palindromo("NEUQUEN") => TRUE 
+es_palindromo("SANTA FE") => FALSE
+5) Explique cómo mostrar todos los elementos, ordenados de menor a mayor, de un árbol binario  ordenado de enteros. 
+Ej: 
+17 
+9 19  
+6 
+1 7 
+Resultado: 1 6 7 9 17 19 21 
+21 
+6) Hay dos archivos de texto donde cada línea tiene solo dos elementos: número de contrato y fecha.  Ambos archivos están ordenados por contrato y fecha.. 
+El primer archivo puede considerarse el estado actual, y el segundo los cambios requeridos. Explique cómo hacer un programa que escriba un nuevo archivo combinando ambos, dando  precedencia a las fechas que se encuentran en el segundo archivo si el contrato está en ambos. 
+Ej: 
+Actual Cambios Resultado 
+
+Contrato 	Fecha 
+100100 	20140301 
+100100 	20140401 
+100100 	20140501 
+100200 	20130110 
+100200 	20130410 
+100200 	20130710 
+100300 	20140615 
+100300 	20140915 
+100300 	20141215 
+
+
+Contrato 	Fecha 
+100150 	20130301 
+100150 	20140301 
+100150 	20150301 
+100200 	20130112 
+100200 	20130412 
+100200 	20130712 
+
+
+Contrato 	Fecha
+100100 	20140301
+100100 	20140401
+100100 	20140501
+100150 	20130301
+100150 	20140301
+100150 	20150301
+100200 	20130112
+100200 	20130412
+100200 	20130712
+100300 	20140615
+100300 	20140915
+100300 	20141215
+
+ 
+7) Dado un archivo con líneas de tres campos, vendedor, fecha y cantidad vendida, explique cómo haría  un programa que genere un archivo de salida con los mismos primeros tres campos y agregando un  campo más con la cantidad total vendida correspondiente al vendedor. 
+Ej: 
+Entrada Salida  
+
+Vendedor 	Fecha 	Cantidad 
+Juan 	20140102 	10 
+Juan 	20140105 	20 
+Juan 	20140205 	12 
+Juan 	20140207 	6 
+Juan 	20140306 	9 
+Pedro 	20140112 	11 
+Pedro 	20140203 	16 
+Pedro 	20140221 	20 
+Pedro 	20140310 	18 
+Jose 	20140210 	30 
+
+
+Vendedor 	Fecha 	Cantidad 	TotalMes
+Juan 	20140102 	10 	57
+Juan 	20140105 	20 	57
+Juan 	20140205 	12 	57
+Juan 	20140207 	6 	57
+Juan 	20140306 	9 	57
+Pedro 	20140112 	11 	65
+Pedro 	20140203 	16 	65
+Pedro 	20140221 	20 	65
+Pedro 	20140310 	18 	65
+Jose 	20140210 	30 	30
+
+ 
+El archivo de entrada se encuentra ya ordenado por vendedor y fecha, pero debe considerarse que es  demasiado extenso para ser leído a una estructura de memoria en su totalidad por haber una gran  cantidad de vendedores distintos. Sin embargo, las ventas de un vendedor dado son de cantidad  acotada.
+8) Una matriz de caracteres de N x M representa un mapa donde el valor ‘ ‘ (espacio) indica terreno libre  y el valor ‘x’ indica un obstáculo. Explique cómo haría un programa que indique las coordenadas de un  camino que va desde la posición (0,0) hasta cualquier casillero en la última fila. 
+Ej:  
+
+	0 	1 	2 	3 
+0				
+1 	x 	x 		x 
+2				
+3 			x	
+4				
+
+
+Resultado valido: (0,0) (0,1) (0,2) (1,2) (2, 2) (2, 3) (3, 3) (4, 3) Resultado valido: (0,0) (0,1) (0,2) (1,2) (2, 2) (2, 1) (3, 1) (4, 1) 
+Evaluación de Bases de Datos 
+¿Qué es un “primary key”? ¿Qué es un “foreign key”? 
+¿Cuál es el error en la siguiente sentencia? 
+SELECT Pais, Ciudad, SUM(NumeroHabitantes) FROM Lugar GROUP BY Ciudad ¿Qué es un trigger? ¿Cuáles son los tres tipos básicos de trigger? 
+¿Qué es una transacción? ¿Para que se usa? 
+¿Qué es un índice? ¿Para que se usa? 
+¿Cuál es la diferencia entre los siguientes fragmentos? 
+... WHERE Id NOT IN (SELECT Id FROM Tabla2) 
+... WHERE NOT EXISTS (SELECT NULL FROM Tabla2 t2 WHERE t2.Id = t1.Id)
+Dado el siguiente esquema de tablas 
+PRODUCTO
+IdProducto 	Nombre
+
+
+VENTA
+IdProducto 	Fecha 	Precio 	Cantidad
+
+
+Escriba consultas para obtener la siguiente información: 
+1. Nombre de los productos ordenados por mayor cantidad total de venta (más vendido primero) 2. Nombre de producto y precio promedio de venta (ponderado por cantidad). 
+3. Nombre de producto y cantidad vendida en el 2006 con precio promedio de venta (en 2006) mayor  a $10
+Evaluación de Unix / Linux 
+1) ¿Con qué comando se averigua el directorio actual?  
+2) ¿A qué directorio espera que se cambie si se ejecuta “cd” sin argumentos? 
+3) ¿Cómo se obtiene un listado extendido de archivos (con tamaño, fecha etc.)? 
+4) ¿Qué es un proceso? ¿Cómo obtengo una lista de todos los procesos de mi usuario? 
+5) Dada la siguiente salida: 
+> /bin/ls -a 
+. .. .harry Hat boat hill house push tree 
+¿Qué imprime el comando “echo h*”? 
+6) Estando en el mismo directorio que en la pregunta 5 ¿Qué valor tendría “$1” si se llama al siguiente  script con “h*” como argumento? 
+#/bin/ksh 
+echo my first argument is $1 
+a) h* 
+b) .harry 
+c) hill 
+d) Hat 
+e) ninguno de los anteriores 
+7) ¿Qué ocurre si por accidente ingresa un espacio extra al querer borrar todos los archivos con extensión  “.old” y escribe “rm -f * .old”?
+8) Dada las siguientes salidas: 
+> ls -l 
+total 0 
+-rw-r--r-- 1 user users 38 Oct 6 12:24 myscript.sh 
+> cat myscript.sh 
+#!/bin/ksh 
+echo This is a test script 
+> ./myscript.sh 
+ksh: ./myscript.sh: cannot execute - Permission denied ¿Qué debería hacer para solucionar el problema y poder ejecutar el script? 
+9) Para el mismo archivo de la pregunta 8 ¿Qué debo hacer para que pueda ser modificado por cualquier  usuario del grupo “developers”? (sin importar el acceso para el grupo “users”) 
+10) ¿Cómo puedo saber cuanto espacio en disco ocupa un directorio completo? 11) ¿Cómo puedo saber cuanto espacio libre hay en un volumen dado? 
+12) ¿Cómo puedo saber qué otros usuarios están conectados al sistema? 
+13) ¿Qué comando ejecutaría (con parámetros) para hacer un backup comprimido del directorio “old” y  todos sus subdirectorios? 
+14) ¿Cómo haría para recuperar todos los archivos contenidos en un archivo llamado “backup.tgz”?
+15) ¿Con qué comando puedo buscar ocurrencias de un texto dentro de un archivo? Escriba como buscaría  las ocurrencias de “myMethod” dentro de todos los archivos con extensión “.cpp” en el directorio actual. 
+16) Elija uno de los comandos “cut”, “sed”, “awk” y explique para que se usa. 
+17) ¿Que es un link simbólico? Escriba como crearía un link simbólico llamado “alink.txt” a un file  llamado “afile.txt” 
+18) ¿Cómo se ejecutan aplicaciones graficas en un servidor remoto usando Unix/Linux? 19) Explique que debe contener la variable “DISPLAY” y para que sirve. 
+20) ¿Cómo se redirige la entrada/salida/error estándar y para qué sirve? ¿Qué es un pipe? 
+21) ¿Qué son las señales? ¿Cómo se envía una señal a un proceso y en que casos sería útil/necesario?
