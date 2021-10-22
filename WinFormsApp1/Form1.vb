@@ -9,7 +9,7 @@
 
     Public Function MayorEnLista(array As Array) As Integer
         Try
-            Dim mayor As Integer = array(0)
+            Dim mayor As Integer = array(0) 'Me quedo con el primer elemento del Array
             For Each numero In array
                 If numero > mayor Then
                     mayor = numero
@@ -140,7 +140,7 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim verdadero = EsPalindromo("NEUQUEN")
-        Dim falso = EsPalindromo("ALGO")
+        Dim falso = EsPalindromo("PALINDROMO")
     End Sub
 
     '5) Explique cómo mostrar todos los elementos, ordenados de menor a mayor, de un árbol binario  ordenado de enteros. 
@@ -151,6 +151,24 @@
     '1 7 
     'Resultado: 1 6 7 9 17 19 21 
     '21 
+
+    Public Sub Ejercicio5()
+        'CREO EL ARBOL BINARIO DEL EJERCICIO 5
+        Dim arbol As New ArbolBinario(17)
+        arbol.Agregar(9)
+        arbol.Agregar(19)
+        arbol.Agregar(6)
+        arbol.Agregar(21)
+        arbol.Agregar(1)
+        arbol.Agregar(7)
+
+        Dim lista = arbol.OrdenarArbolBinario()
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Ejercicio5()
+    End Sub
+
     '6) Hay dos archivos de texto donde cada línea tiene solo dos elementos: número de contrato y fecha.  Ambos archivos están ordenados por contrato y fecha.. 
     'El primer archivo puede considerarse el estado actual, y el segundo los cambios requeridos. Explique cómo hacer un programa que escriba un nuevo archivo combinando ambos, dando  precedencia a las fechas que se encuentran en el segundo archivo si el contrato está en ambos. 
     'Ej: 
